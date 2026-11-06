@@ -55,6 +55,7 @@
 
       // 5. Suscribirse a cambios del Almacén para actualizar perfil
       this._syncUserProfile();
+      this._syncNavBadges();
 
       // 6. Mensaje de bienvenida inicial en consola / telemetría
       if (window.analytics) {
@@ -196,6 +197,32 @@
         }
       };
 
+      updateDom();
+      if (window.store) {
+        window.store.subscribe(() => updateDom());
+      }
+    }
+
+    /**
+     * Sincroniza badges vivos en el Sidebar (Matrículas, Mesa Académica)
+     */
+    _syncNavBadges() {
+      const updateDom = () => {
+        const state = window.store ? window.store.getState() : null;
+        if (!state) return;
+        const enrollBadge = document.getElementById('nav-badge-enrollments');
+        if (enrollBadge) {
+          const activeLots = (state.scheduledBatches || []).filter(b => b.status === 'scheduled').length;
+          enrollBadge.textContent = activeLots ? `${state.enrollments.length} · ${activeLots}⚡` : String(state.enrollments.length);
+          enrollBadge.style.display = '';
+        }
+        const casesBadge = document.getElementById('nav-badge-cases');
+        if (casesBadge) {
+          const openCases = (state.academicCases || []).filter(c => c.status === 'open' || c.status === 'in_progress').length;
+          casesBadge.textContent = String(openCases);
+          casesBadge.style.display = openCases ? '' : 'none';
+        }
+      };
       updateDom();
       if (window.store) {
         window.store.subscribe(() => updateDom());

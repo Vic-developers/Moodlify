@@ -19,13 +19,24 @@
       trend = null, // { value: '+12%', isPositive: true }
       subtext = 'respecto al período anterior',
       icon = '',
-      colorClass = 'primary' // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      colorClass = 'primary', // 'primary' | 'success' | 'warning' | 'danger' | 'info'
+      sparkline = null // [10,14,13,20] -> inline spark SVG
     }) {
       const trendHtml = trend
         ? `<span class="metric-trend ${trend.isPositive ? 'up' : 'down'}">
             ${trend.isPositive ? '↑' : '↓'} ${trend.value}
            </span>`
         : '';
+      let sparkHtml = '';
+      if (Array.isArray(sparkline) && sparkline.length >= 2) {
+        const w = 84, h = 28, max = Math.max(...sparkline), min = Math.min(...sparkline), range = (max - min) || 1;
+        const pts = sparkline.map((v, i) => {
+          const x = (i / (sparkline.length - 1)) * w;
+          const y = h - ((v - min) / range) * (h - 4) - 2;
+          return `${x.toFixed(1)},${y.toFixed(1)}`;
+        }).join(' ');
+        sparkHtml = `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="flex-shrink:0;opacity:0.9;"><polyline points="${pts}" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+      }
 
       return `
         <div class="metric-card animate-fade-in">
@@ -35,7 +46,10 @@
               ${icon}
             </div>
           </div>
-          <div class="metric-value">${value}</div>
+          <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:0.75rem;">
+            <div class="metric-value">${value}</div>
+            ${sparkHtml}
+          </div>
           <div class="metric-footer">
             ${trendHtml}
             <span class="metric-subtext">${subtext}</span>

@@ -163,20 +163,22 @@ button {
 }
 
 .nav-item.active {
-  background-color: var(--primary-light);
+  background: var(--primary-light);
   color: var(--primary);
   font-weight: 600;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--primary) 18%, transparent);
 }
 
 .nav-item.active::before {
   content: '';
   position: absolute;
-  left: 0;
-  top: 18%;
-  bottom: 18%;
-  width: 3.5px;
-  background-color: var(--primary);
+  left: -0.75rem;
+  top: 22%;
+  bottom: 22%;
+  width: 4px;
+  background: var(--gradient-primary, var(--primary));
   border-radius: 0 4px 4px 0;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
 }
 
 .nav-item i, .nav-item svg {
@@ -188,12 +190,14 @@ button {
 
 .nav-badge {
   margin-left: auto;
-  font-size: 0.72rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 700;
   padding: 0.15rem 0.5rem;
   border-radius: 9999px;
   background-color: var(--bg-hover);
   color: var(--muted);
+  border: 1px solid var(--border);
+  font-variant-numeric: tabular-nums;
 }
 
 .nav-item.active .nav-badge {
@@ -358,33 +362,52 @@ button {
 /* --- Page Content Area --- */
 .page-content {
   flex: 1;
-  padding: 1.75rem;
-  max-width: 1600px;
+  padding: 2rem 2rem 2.5rem 2rem;
+  max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+  background-image: var(--gradient-mesh, none);
 }
 
 .page-header {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: space-between;
   margin-bottom: 1.75rem;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary);
+  background: var(--primary-light);
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-full, 9999px);
+  margin-bottom: 0.5rem;
 }
 
 .page-title {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.02em;
   color: var(--text);
+  line-height: 1.2;
   margin-bottom: 0.25rem;
 }
 
 .page-subtitle {
-  font-size: 0.875rem;
+  font-size: 0.8625rem;
   color: var(--muted);
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .page-actions {

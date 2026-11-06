@@ -4,7 +4,7 @@
  * Estrategias de caché: Cache-First (estáticos) y Network-First con fallback offline (navegación y dinámicos)
  */
 
-const CACHE_NAME = 'moodlify-v2.0.7';
+const CACHE_NAME = 'moodlify-v2.0.8';
 const OFFLINE_URL = 'offline.html';
 
 // Recursos críticos del App Shell para funcionamiento offline inmediato
