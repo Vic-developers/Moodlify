@@ -1,0 +1,55 @@
+{
+  "name": "Moodlify - Plataforma SaaS de Administración de Moodle",
+  "short_name": "Moodlify",
+  "description": "Administración centralizada y eficiente de múltiples instancias de Moodle LMS",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f5f7fb",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "categories": [
+    "education",
+    "productivity",
+    "utilities"
+  ],
+  "lang": "es-ES",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192' fill='%232563eb'%3E%3Crect width='192' height='192' rx='40' fill='%232563eb'/%3E%3Cpath d='M48 64h24v64H48zm36-16h24v80H84zm36 24h24v56h-24z' fill='%23ffffff'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' fill='%232563eb'%3E%3Crect width='512' height='512' rx='100' fill='%232563eb'/%3E%3Cpath d='M128 170h64v172h-64zm96-42h64v214h-64zm96 64h64v150h-64z' fill='%23ffffff'/%3E%3C/svg%3E",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "short_name": "Dashboard",
+      "description": "Ir al resumen de control principal",
+      "url": "/index.html#dashboard",
+      "icons": [{ "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2'%3E%3Crect width='7' height='9' x='3' y='3' rx='1'/%3E%3Crect width='7' height='5' x='14' y='3' rx='1'/%3E%3Crect width='7' height='9' x='14' y='12' rx='1'/%3E%3Crect width='7' height='5' x='3' y='16' rx='1'/%3E%3C/svg%3E", "sizes": "96x96" }]
+    },
+    {
+      "name": "Plataformas",
+      "short_name": "Plataformas",
+      "description": "Gestionar instancias Moodle conectadas",
+      "url": "/index.html#platforms",
+      "icons": [{ "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2'%3E%3Crect width='20' height='8' x='2' y='2' rx='2'/%3E%3Crect width='20' height='8' x='2' y='14' rx='2'/%3E%3Cline x1='6' x2='6.01' y1='6' y2='6'/%3E%3Cline x1='6' x2='6.01' y1='18' y2='18'/%3E%3C/svg%3E", "sizes": "96x96" }]
+    },
+    {
+      "name": "Incidencias",
+      "short_name": "Tickets",
+      "description": "Revisar incidencias y soporte",
+      "url": "/index.html#incidences",
+      "icons": [{ "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232563eb' stroke-width='2'%3E%3Cpath d='m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z'/%3E%3Cline x1='12' x2='12' y1='9' y2='13'/%3E%3Cline x1='12' x2='12.01' y1='17' y2='17'/%3E%3C/svg%3E", "sizes": "96x96" }]
+    }
+  ]
+}
+

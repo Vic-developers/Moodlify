@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moodlify - Página no encontrada (Error 404)">
+  <title>Moodlify — 404 Página no encontrada</title>
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Estilos del Sistema -->
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+
+  <style>
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at 50% 20%, var(--primary-light) 0%, var(--bg) 70%);
+      padding: 1.5rem;
+      margin: 0;
+      color: var(--text);
+    }
+
+    .error-card {
+      max-width: 560px;
+      width: 100%;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      animation: slideUp 0.4s var(--ease-out);
+    }
+
+    .error-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.85rem;
+      background: var(--danger-light);
+      color: var(--danger);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      border-radius: var(--radius-full);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .error-graphic {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 1.5rem auto;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--bg-alt));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed var(--border-hover);
+      color: var(--primary);
+    }
+
+    .error-graphic svg {
+      width: 56px;
+      height: 56px;
+      stroke-width: 1.75;
+    }
+
+    .error-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .error-description {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .error-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .quick-links {
+      border-top: 1px solid var(--border);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      text-align: left;
+    }
+
+    .quick-links-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+
+    .quick-link-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: var(--radius-md);
+      color: var(--text-secondary);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      text-decoration: none;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      transition: all var(--transition-fast);
+    }
+
+    .quick-link-item:hover {
+      background: var(--bg-hover);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .quick-link-item svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="error-card">
+    <div class="error-badge">
+      <i data-lucide="alert-triangle"></i>
+      <span>Error 404 • Página No Encontrada</span>
+    </div>
+
+    <div class="error-graphic">
+      <i data-lucide="compass"></i>
+    </div>
+
+    <h1 class="error-title">Ruta Extraviada</h1>
+    <p class="error-description">
+      La dirección que intentas abrir no existe en este servidor, ha cambiado de lugar o tu sesión fue redirigida a una vista no disponible.
+    </p>
+
+    <div class="error-actions">
+      <a href="index.html#dashboard" class="btn btn-primary">
+        <i data-lucide="arrow-left"></i>
+        <span>Volver al Dashboard</span>
+      </a>
+      <a href="login.html" class="btn btn-secondary">
+        <i data-lucide="log-in"></i>
+        <span>Pantalla de Acceso</span>
+      </a>
+    </div>
+
+    <div class="quick-links">
+      <div class="quick-links-title">Destinos Frecuentes</div>
+      <div class="quick-links-grid">
+        <a href="index.html#platforms" class="quick-link-item">
+          <i data-lucide="server"></i>
+          <span>Plataformas LMS</span>
+        </a>
+        <a href="index.html#users" class="quick-link-item">
+          <i data-lucide="users"></i>
+          <span>Usuarios</span>
+        </a>
+        <a href="index.html#courses" class="quick-link-item">
+          <i data-lucide="book-open"></i>
+          <span>Cursos</span>
+        </a>
+        <a href="index.html#incidences" class="quick-link-item">
+          <i data-lucide="life-buoy"></i>
+          <span>Mesa de Ayuda</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Sincronizar tema activo guardado
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('moodlify_theme') || 'light';
+        if (savedTheme === 'auto') {
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        } else {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+      } catch (e) {
+        // Fallback seguro
+      }
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    })();
+  </script>
+</body>
+</html>
+

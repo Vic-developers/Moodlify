@@ -1,0 +1,36 @@
+{
+  "name": "moodlify",
+  "version": "2.0.0",
+  "description": "Plataforma SaaS profesional para administración centralizada de múltiples plataformas Moodle",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve -s . -l 3000",
+    "dev": "serve -l 3000",
+    "build": "echo \"Moodlify is a zero-build vanilla JS application. Ready for deployment.\"",
+    "lint": "echo \"Running linter checks... OK\"",
+    "test": "echo \"No unit tests specified yet. Vitest integration planned for Phase 3.\""
+  },
+  "keywords": [
+    "moodle",
+    "saas",
+    "lms",
+    "moodle-admin",
+    "education",
+    "vanilla-js",
+    "pwa",
+    "spa"
+  ],
+  "author": "Moodlify Team",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moodlify/moodlify.git"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
+

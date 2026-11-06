@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <title>Moodlify — Plataforma SaaS de Administración Centralizada de Moodle</title>
+  <meta name="description" content="Plataforma SaaS profesional para la administración centralizada de múltiples instancias Moodle LMS." />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="application-name" content="Moodlify" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Moodlify" />
+
+  <!-- Open Graph / SEO -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Moodlify — Administración Centralizada de Moodle" />
+  <meta property="og:description" content="Gestiona múltiples plataformas Moodle desde un único panel moderno y de alto rendimiento." />
+  <meta property="og:site_name" content="Moodlify" />
+
+  <!-- PWA Manifest & Favicon Vectorial -->
+  <link rel="manifest" href="manifest.json" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192' fill='%232563eb'%3E%3Crect width='192' height='192' rx='40' fill='%232563eb'/%3E%3Cpath d='M48 64h24v64H48zm36-16h24v80H84zm36 24h24v56h-24z' fill='%23ffffff'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Inter Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Moodlify CSS Core -->
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+
+  <!-- External CDN Libraries: Lucide Icons & Chart.js -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- Sidebar Navigation Drawer -->
+    <aside class="sidebar" aria-label="Menú principal de navegación">
+      <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <div class="brand-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+              <path d="M6 6h10"/>
+              <path d="M6 10h10"/>
+            </svg>
+          </div>
+          <span>Moodlify</span>
+        </div>
+        <span class="sidebar-version">v2.0</span>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">Principal</div>
+        <a href="#dashboard" class="nav-item active">
+          <i data-lucide="layout-dashboard"></i>
+          <span>Dashboard</span>
+        </a>
+        <a href="#platforms" class="nav-item">
+          <i data-lucide="server"></i>
+          <span>Plataformas</span>
+        </a>
+
+        <div class="nav-section-title">Gestión Académica</div>
+        <a href="#users" class="nav-item">
+          <i data-lucide="users"></i>
+          <span>Usuarios</span>
+        </a>
+        <a href="#courses" class="nav-item">
+          <i data-lucide="book-open"></i>
+          <span>Cursos</span>
+        </a>
+        <a href="#teaching" class="nav-item">
+          <i data-lucide="graduation-cap"></i>
+          <span>Data Docente</span>
+        </a>
+        <a href="#periods" class="nav-item">
+          <i data-lucide="calendar"></i>
+          <span>Periodos</span>
+        </a>
+        <a href="#cohorts" class="nav-item">
+          <i data-lucide="users"></i>
+          <span>Cohortes</span>
+        </a>
+        <a href="#enrollments" class="nav-item">
+          <i data-lucide="user-check"></i>
+          <span>Matrículas</span>
+        </a>
+        <a href="#activity" class="nav-item">
+          <i data-lucide="activity"></i>
+          <span>Actividad y Progreso</span>
+        </a>
+        <a href="#importer" class="nav-item">
+          <i data-lucide="upload"></i>
+          <span>Importador CSV</span>
+        </a>
+
+        <div class="nav-section-title">Operaciones & TI</div>
+        <a href="#automations" class="nav-item">
+          <i data-lucide="zap"></i>
+          <span>Automatizaciones</span>
+        </a>
+        <a href="#reports" class="nav-item">
+          <i data-lucide="bar-chart-3"></i>
+          <span>Reportes</span>
+        </a>
+        <a href="#integrations" class="nav-item">
+          <i data-lucide="key"></i>
+          <span>Integraciones</span>
+        </a>
+        <a href="#backups" class="nav-item">
+          <i data-lucide="database"></i>
+          <span>Backups</span>
+        </a>
+        <a href="#academic-cases" class="nav-item">
+          <i data-lucide="message-circle"></i>
+          <span>Mesa Académica</span>
+        </a>
+        <a href="#incidences" class="nav-item">
+          <i data-lucide="alert-triangle"></i>
+          <span>Incidencias</span>
+        </a>
+
+        <div class="nav-section-title">Ajustes</div>
+        <a href="#settings" class="nav-item">
+          <i data-lucide="settings"></i>
+          <span>Configuración</span>
+        </a>
+      </nav>
+
+      <!-- Sidebar Footer / Profile -->
+      <div class="sidebar-footer">
+        <div class="user-profile-summary">
+          <div class="avatar" id="sidebar-user-avatar">VL</div>
+          <div class="user-info">
+            <div class="user-name" id="sidebar-user-name">Víctor Lorenzo</div>
+            <div class="user-role" id="sidebar-user-role">Administrador TI</div>
+          </div>
+          <button class="btn btn-ghost btn-icon btn-sm" id="sidebar-logout-btn" title="Cerrar Sesión" aria-label="Cerrar Sesión">
+            <i data-lucide="log-out" style="width: 16px; height: 16px;"></i>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Overlay backdrop for mobile sidebar -->
+    <div class="sidebar-overlay"></div>
+
+    <!-- Main Content Area Wrapper -->
+    <div class="main-wrapper">
+      <!-- Topbar Header -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="sidebar-toggle-btn" id="sidebar-toggle-btn" aria-label="Abrir menú lateral">
+            <i data-lucide="menu" style="width: 20px; height: 20px;"></i>
+          </button>
+
+          <nav class="breadcrumb-nav" id="topbar-breadcrumbs" aria-label="Miga de pan">
+            <span class="breadcrumb-item">Inicio</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-active">Dashboard</span>
+          </nav>
+        </div>
+
+        <div class="topbar-right">
+          <!-- Quick Search & Command Palette Button -->
+          <div class="quick-search-trigger" id="topbar-search-trigger" role="button" tabindex="0" title="Buscar comandos (Ctrl+K)">
+            <i data-lucide="search" style="width: 15px; height: 15px;"></i>
+            <span class="search-label">Buscar o accionar...</span>
+            <kbd class="kbd-badge">Ctrl K</kbd>
+          </div>
+
+          <!-- Theme Switcher -->
+          <button class="btn btn-secondary btn-icon" id="theme-toggle-btn" title="Cambiar Tema (Claro / Oscuro / Alto Contraste)" aria-label="Cambiar Tema">
+            <i data-lucide="sun-moon" style="width: 18px; height: 18px;"></i>
+          </button>
+
+          <!-- Notifications Bell Trigger -->
+          <button class="btn btn-secondary btn-icon" id="notifications-trigger-btn" style="position: relative;" title="Notificaciones del Sistema" aria-label="Notificaciones">
+            <i data-lucide="bell" style="width: 18px; height: 18px;"></i>
+            <span id="notifications-badge-count" class="badge badge-danger" style="position: absolute; top: -4px; right: -4px; padding: 0.15rem 0.35rem; font-size: 0.65rem; border: 2px solid var(--card);">3</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dynamic Page Mounting Container -->
+      <main class="page-content" id="page-container" role="main">
+        <!-- Las páginas SPA se renderizan dinámicamente aquí -->
+      </main>
+    </div>
+  </div>
+
+  <!-- ==============================================================================
+       SCRIPTS: Carga secuencial y estructurada en orden de dependencias
+       ============================================================================== -->
+  <!-- 1. Configuración & Core -->
+  <script src="js/config.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/security.js"></script>
+  <script src="js/error-handler.js"></script>
+  <script src="js/auth.js"></script>
+
+  <!-- 2. Utilidades JS -->
+  <script src="js/themes.js"></script>
+  <script src="js/router.js"></script>
+  <script src="js/analytics.js"></script>
+  <script src="js/moodle-service.js"></script>
+  <script src="js/notifications.js"></script>
+  <script src="js/webhooks.js"></script>
+
+  <!-- 3. Componentes UI Reutilizables -->
+  <script src="js/components/toast.js"></script>
+  <script src="js/components/modal.js"></script>
+  <script src="js/components/skeleton.js"></script>
+  <script src="js/components/command-palette.js"></script>
+  <script src="js/components/widgets.js"></script>
+
+  <!-- 4. Vistas y Páginas SPA -->
+  <script src="js/pages/dashboard.js"></script>
+  <script src="js/pages/platforms.js"></script>
+  <script src="js/pages/users.js"></script>
+  <script src="js/pages/courses.js"></script>
+  <script src="js/pages/teaching.js"></script>
+  <script src="js/pages/periods.js"></script>
+  <script src="js/pages/cohorts.js"></script>
+  <script src="js/pages/enrollments.js"></script>
+  <script src="js/pages/activity.js"></script>
+  <script src="js/pages/importer.js"></script>
+  <script src="js/pages/automations.js"></script>
+  <script src="js/pages/reports.js"></script>
+  <script src="js/pages/integrations.js"></script>
+  <script src="js/pages/backups.js"></script>
+  <script src="js/pages/academic-cases.js"></script>
+  <script src="js/pages/incidences.js"></script>
+  <script src="js/pages/settings.js"></script>
+
+  <!-- 5. Bootstrap de la Aplicación -->
+  <script src="js/app.js"></script>
+</body>
+</html>
+
